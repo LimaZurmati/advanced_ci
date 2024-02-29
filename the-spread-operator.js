@@ -1,7 +1,7 @@
 /**
  * To run this file in Gitpod, use the 
  * command node the-spread-operator.js in the terminal
- */
+ 
 
 // No spread operator
 let arr1 = [1,2,3];
@@ -29,3 +29,44 @@ console.log("third-object", obj3);
 // Copying only part of an array/object
 let arr5 = [...arr1, {...obj1}, ...arr3, "x", "y", "z"];
 console.log(arr5);
+//callback function
+hello(oodbye);
+function hello(callback){
+    console.log("hello");
+    callback();
+}
+function goodbye(){
+    console.log("bye")
+}
+
+
+// map
+const students = ["lima", "hawa","marwa"];
+const studentupper = students.map(upperCase);
+
+console.log(studentupper);
+ 
+function upperCase(element){
+    return element.upperCase();
+}
+
+
+
+//filter
+let numbers = [1, 1, 3, 4, 5, 6];
+let evennum = numbers.filter(isEven);
+console.log(evennum);
+
+function isEven(element){
+    return element % 2 ===0;
+}
+*/
+// reduce = reduce the elemnts of any array to a single value
+const grades = [75, 50, 90, 80, 95];
+
+const maximum = grades.reduce(getMax);
+console.log(maximum);
+
+function getMax(accumulator, element){
+    return Math.max(accumulator, element);
+}
